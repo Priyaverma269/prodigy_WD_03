@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #a2c4c9, #fff);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+#state-select, #city-select, #city-input, #search-button {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.weather-info {
+    display: none;
+}
+
+.weather-info h2,
+.weather-info p {
+    margin: 10px 0;
+}
+
+/* Cloud styles */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    opacity: 0.8;
+}
+
+.cloud:before,
+.cloud:after {
+    content: '';
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud:before {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: 30px;
+}
+
+.cloud:after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: -30px;
+}
+
+/* Specific cloud instances */
+#cloud1 {
+    width: 120px;
+    height: 120px;
+    top: 50px;
+    left: 20%;
+    animation: moveClouds 60s linear infinite;
+}
+
+#cloud2 {
+    width: 180px;
+    height: 180px;
+    top: 100px;
+    left: 50%;
+    animation: moveClouds 100s linear infinite;
+}
+
+#cloud3 {
+    width: 150px;
+    height: 150px;
+    top: 150px;
+    left: 80%;
+    animation: moveClouds 80s linear infinite;
+}
+
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
